@@ -1,0 +1,53 @@
+import type { Metadata } from "next";
+import PremiumServicePage from "../PremiumServicePage";
+import { accounting, serviceSummaries } from "../content";
+
+export const metadata: Metadata = {
+  title: "Accounting Services for Small Businesses | IntegriLytics",
+  description:
+    "Bookkeeping, tax prep, payroll, and specialized accounting (cost, forensic, trust, multi-entity) for small businesses nationwide. Clean books, clear numbers.",
+  alternates: { canonical: "https://integrilytics.vercel.app/services/accounting" },
+};
+
+// Images aligned to the Core Accounting Services categories, in order.
+const coreImages: { src: string; alt: string }[] = [
+  { src: "/media/acc-setup.jpg", alt: "A desk being set up with tax folders, a calculator, and ledgers" },
+  { src: "/media/acc-cleanup.jpg", alt: "Hands sorting and correcting stacks of financial paperwork" },
+  { src: "/media/acc-bookkeeping.jpg", alt: "A laptop beside monthly accounting statements and reports" },
+  { src: "/media/acc-software.jpg", alt: "An accountant working in accounting software at a desk" },
+  { src: "/media/acc-salestax.jpg", alt: "Tax forms and a calculator laid out for filing" },
+  { src: "/media/acc-payroll.jpg", alt: "A calculator and documents used for payroll processing" },
+  { src: "/media/acc-incometax.jpg", alt: "An advisor reviewing tax planning with clients" },
+];
+
+export default function AccountingPage() {
+  const core = accounting.groups[0].categories;
+  const specialized = accounting.groups[1].categories;
+
+  return (
+    <PremiumServicePage
+      path="/services/accounting"
+      eyebrow="Accounting"
+      title="Accounting that keeps your business ahead"
+      intro={accounting.intro}
+      heroImage="/media/acc-hero.jpg"
+      heroAlt="An accountant reviewing financials with small business owners"
+      coreEyebrow="What we handle"
+      coreHeading="Core accounting, end to end"
+      rows={core.map((cat, i) => ({
+        name: cat.name,
+        summary: serviceSummaries[cat.name],
+        includes: cat.items.join("  ·  "),
+        image: coreImages[i].src,
+        alt: coreImages[i].alt,
+      }))}
+      specialized={{
+        eyebrow: "Going deeper",
+        heading: "Specialized accounting",
+        intro:
+          "When your books need more than the basics, we bring the specialists. Complex, regulated, and multi-entity work, handled with the same care.",
+        items: specialized.map((cat) => ({ name: cat.name, detail: cat.items.join("  ·  ") })),
+      }}
+    />
+  );
+}

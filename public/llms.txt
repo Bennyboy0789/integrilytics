@@ -1,0 +1,22 @@
+# IntegriLytics
+
+> Accounting, HR, and operational oversight for small and mid-sized businesses nationwide. Based in Fayetteville, NC; working remotely and on-site across the United States.
+
+IntegriLytics ("Integrity + Analytics") provides one team for accounting, human resources, and operational oversight so business owners can focus on running their business. Free 15-minute consultations are available.
+
+## Services
+
+- [Accounting](https://integrilytics.vercel.app/services/accounting): Bookkeeping, tax prep, payroll, sales tax, and specialized accounting (cost, forensic, trust, non-profit, multi-entity).
+- [Human Resources](https://integrilytics.vercel.app/services/hr): Talent acquisition, employee relations, compensation and benefits, HR compliance, workplace safety, and training.
+- [Operational Oversight](https://integrilytics.vercel.app/services/operations): Business operations, office administration, process improvement, systems and technology, planning, and performance.
+
+## Company
+
+- [About](https://integrilytics.vercel.app/about): Who we are, our process, where we work, and the industries we support.
+- [Book a Consultation](https://integrilytics.vercel.app/book): Remote, office, or on-site consultations; free 15-minute intro calls.
+
+## Contact
+
+- Phone: (888) 316-0360
+- Email: info@integrilyticsinc.com
+- Location: Fayetteville, North Carolina (serving businesses nationwide)

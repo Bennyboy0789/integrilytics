@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #faf9f6; /* warm off-white base */
   --foreground: #171717;
 }
 
@@ -10,17 +10,82 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-heading), Georgia, "Times New Roman", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Brand palette: warm neutrals + a restrained brass accent alongside the existing navy. */
+@theme {
+  --color-cream: #faf9f6;
+  --color-cream-100: #f5f2ec;
+  --color-cream-200: #efeadf;
+
+  --color-brass-50: #faf6ef;
+  --color-brass-100: #f2e9d8;
+  --color-brass-200: #e6d3b0;
+  --color-brass-300: #d8bd8b;
+  --color-brass-400: #c9a56a;
+  --color-brass-500: #b08d57;
+  --color-brass-600: #977645;
+  --color-brass-700: #7c5f37;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+/* Soft, diffuse elevation for cards/panels — warmer and deeper than default Tailwind shadows. */
+.shadow-premium {
+  box-shadow: 0 1px 2px rgba(23, 37, 84, 0.04), 0 12px 32px -12px rgba(23, 37, 84, 0.16);
+}
+.shadow-premium-lg {
+  box-shadow: 0 2px 4px rgba(23, 37, 84, 0.05), 0 28px 60px -20px rgba(23, 37, 84, 0.28);
+}
+
+/* Consistent color grade so mixed stock photography reads as one brand. */
+.img-grade {
+  filter: saturate(0.9) contrast(1.02);
+}
+
+/* Thin brass rule used under eyebrows/section kickers. */
+.rule-brass::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-top: 0.75rem;
+  background: var(--color-brass-500);
+  border-radius: 2px;
+}
+.rule-brass.rule-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+
+/* Scroll-reveal (activated only when JS adds .reveal-ready, so no-JS shows content) */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
