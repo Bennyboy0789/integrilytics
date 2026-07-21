@@ -64,6 +64,7 @@ export default function OperationsPage() {
   return (
     <PremiumServicePage
       path="/services/operations"
+      graphic="operations"
       eyebrow="Operational Oversight"
       title="Operations that keep everything running"
       intro={operations.intro}

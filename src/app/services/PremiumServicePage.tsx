@@ -4,6 +4,7 @@ import SiteHeader from "../SiteHeader";
 import Reveal from "../motion/Reveal";
 import FeatureRow from "../motion/FeatureRow";
 import SiteFooter from "../SiteFooter";
+import ServiceGraphic, { type ServiceVariant } from "../ServiceGraphic";
 import JsonLd, { serviceSchema, breadcrumb } from "../JsonLd";
 
 const PHONE_DISPLAY = "(888) 316-0360";
@@ -37,6 +38,7 @@ export default function PremiumServicePage({
   rows,
   specialized,
   faqs,
+  graphic,
   path,
 }: {
   eyebrow: string;
@@ -49,6 +51,7 @@ export default function PremiumServicePage({
   rows: FeatureRowData[];
   specialized?: SpecializedData;
   faqs?: ServiceFaq[];
+  graphic?: ServiceVariant;
   path: string;
 }) {
   return (
@@ -110,14 +113,20 @@ export default function PremiumServicePage({
               aria-hidden="true"
               className="absolute -z-10 -right-5 top-5 h-full w-full rounded-3xl border border-brass-300/70"
             />
-            <Image
-              src={heroImage}
-              alt={heroAlt}
-              width={1200}
-              height={900}
-              priority
-              className="img-grade w-full h-[320px] md:h-[440px] object-cover rounded-3xl shadow-premium-lg"
-            />
+            {graphic ? (
+              <div className="w-full h-[320px] md:h-[440px] overflow-hidden rounded-3xl shadow-premium-lg">
+                <ServiceGraphic variant={graphic} />
+              </div>
+            ) : (
+              <Image
+                src={heroImage}
+                alt={heroAlt}
+                width={1200}
+                height={900}
+                priority
+                className="img-grade w-full h-[320px] md:h-[440px] object-cover rounded-3xl shadow-premium-lg"
+              />
+            )}
           </Reveal>
         </div>
       </section>

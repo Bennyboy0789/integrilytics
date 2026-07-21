@@ -56,6 +56,7 @@ export default function HrPage() {
   return (
     <PremiumServicePage
       path="/services/hr"
+      graphic="hr"
       eyebrow="Human Resources"
       title="HR that protects your team and your business"
       intro={hr.intro}

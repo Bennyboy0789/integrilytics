@@ -6,6 +6,7 @@ import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import Testimonials from "./Testimonials";
 import LocationMap from "./LocationMap";
+import ServiceGraphic from "./ServiceGraphic";
 
 const SITE_URL = "https://integrilytics.vercel.app";
 const PHONE_DISPLAY = "(888) 316-0360";
@@ -16,24 +17,21 @@ const services = [
   {
     title: "Accounting",
     href: "/services/accounting",
-    img: "/media/svc-accounting.jpg",
-    imgAlt: "Financial documents, charts, and a calculator on a desk",
+    variant: "accounting" as const,
     description:
       "Your books, done right. Monthly reconciliation, tax-ready financials, and planning that catches problems before they cost you money. Stop dreading tax season and stop guessing where you stand. You get clean numbers on time, plus a clear read on what they mean for your next decision.",
   },
   {
     title: "Human Resources",
     href: "/services/hr",
-    img: "/media/svc-hr.jpg",
-    imgAlt: "A diverse team meeting in a bright modern office",
+    variant: "hr" as const,
     description:
       "People problems, handled. Payroll that runs on time, benefits and compliance that hold up, handbooks and hiring that protect you. When someone quits, gets hired, or files a complaint, you have a plan instead of a panic. Spend less time refereeing and more time running the business.",
   },
   {
     title: "Operational Oversight",
     href: "/services/operations",
-    img: "/media/svc-operations.jpg",
-    imgAlt: "A person mapping out a business workflow on a whiteboard",
+    variant: "operations" as const,
     description:
       "Well-run businesses don't happen by accident. We build the systems, processes, and daily structure that keep things moving. Office setup, SOPs, software, planning, and performance tracking. You get an organized operation and someone who owns the details, so nothing slips through the cracks.",
   },
@@ -306,14 +304,10 @@ export default function Home() {
                 className="group flex flex-col overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-premium hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src={service.img}
-                    alt={service.imgAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="img-grade object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-x-0 top-0 h-1 bg-brass-400" />
+                  <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105">
+                    <ServiceGraphic variant={service.variant} />
+                  </div>
+                  <div className="absolute inset-x-0 top-0 z-10 h-1 bg-brass-400" />
                 </div>
                 <div className="flex flex-1 flex-col p-8">
                   <h3 className="text-xl font-bold text-blue-900 mb-3">{service.title}</h3>

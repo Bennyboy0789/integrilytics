@@ -50,6 +50,7 @@ export default function AccountingPage() {
   return (
     <PremiumServicePage
       path="/services/accounting"
+      graphic="accounting"
       eyebrow="Accounting"
       title="Accounting that keeps your business ahead"
       intro={accounting.intro}
