@@ -6,14 +6,14 @@ IntegriLytics ("Integrity + Analytics") provides one team for accounting, human 
 
 ## Services
 
-- [Accounting](https://integrilytics.vercel.app/services/accounting): Bookkeeping, tax prep, payroll, sales tax, and specialized accounting (cost, forensic, trust, non-profit, multi-entity).
-- [Human Resources](https://integrilytics.vercel.app/services/hr): Talent acquisition, employee relations, compensation and benefits, HR compliance, workplace safety, and training.
-- [Operational Oversight](https://integrilytics.vercel.app/services/operations): Business operations, office administration, process improvement, systems and technology, planning, and performance.
+- [Accounting](https://www.integrilyticsinc.com/services/accounting): Bookkeeping, tax prep, payroll, sales tax, and specialized accounting (cost, forensic, trust, non-profit, multi-entity).
+- [Human Resources](https://www.integrilyticsinc.com/services/hr): Talent acquisition, employee relations, compensation and benefits, HR compliance, workplace safety, and training.
+- [Operational Oversight](https://www.integrilyticsinc.com/services/operations): Business operations, office administration, process improvement, systems and technology, planning, and performance.
 
 ## Company
 
-- [About](https://integrilytics.vercel.app/about): Who we are, our process, where we work, and the industries we support.
-- [Book a Consultation](https://integrilytics.vercel.app/book): Remote, office, or on-site consultations; free 15-minute intro calls.
+- [About](https://www.integrilyticsinc.com/about): Who we are, our process, where we work, and the industries we support.
+- [Book a Consultation](https://www.integrilyticsinc.com/book): Remote, office, or on-site consultations; free 15-minute intro calls.
 
 ## Contact
 

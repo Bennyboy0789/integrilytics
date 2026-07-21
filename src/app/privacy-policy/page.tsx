@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | IntegriLytics",
   description:
     "How IntegriLytics, Inc. collects, uses, and protects your information when you visit our website and inquire about our services.",
-  alternates: { canonical: "https://integrilytics.vercel.app/privacy-policy" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

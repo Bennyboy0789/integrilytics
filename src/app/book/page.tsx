@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Book a Consultation | IntegriLytics",
   description:
     "Book a remote, office, or on-site consultation with IntegriLytics. Pick a time that works and we will take it from there. Free 15-minute intro calls available.",
-  alternates: { canonical: "https://integrilytics.vercel.app/book" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/book" },
 };
 
 export default function BookPage() {

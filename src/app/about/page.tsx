@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "About IntegriLytics | Who We Are, How We Work, Who We Serve",
   description:
     "Integrity plus analytics. Meet IntegriLytics: who we are, what we do, our five-step process, how and where we work, and the industries we support nationwide.",
-  alternates: { canonical: "https://integrilytics.vercel.app/about" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/about" },
 };
 
 const serviceImg: Record<string, string> = {

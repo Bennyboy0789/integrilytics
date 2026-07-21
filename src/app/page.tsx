@@ -8,7 +8,7 @@ import Testimonials from "./Testimonials";
 import LocationMap from "./LocationMap";
 import ServiceGraphic from "./ServiceGraphic";
 
-const SITE_URL = "https://integrilytics.vercel.app";
+const SITE_URL = "https://www.integrilyticsinc.com";
 const PHONE_DISPLAY = "(888) 316-0360";
 const PHONE_TEL = "+18883160360";
 const EMAIL = "info@integrilyticsinc.com";
@@ -130,8 +130,8 @@ const organizationLd = {
   name: "IntegriLytics",
   description:
     "Accounting, HR, and operational oversight for small and mid-sized businesses nationwide.",
-  logo: "https://integrilytics.vercel.app/media/logo.png",
-  image: "https://integrilytics.vercel.app/opengraph-image",
+  logo: "https://www.integrilyticsinc.com/media/logo.png",
+  image: "https://www.integrilyticsinc.com/opengraph-image",
   telephone: PHONE_TEL,
   email: EMAIL,
   address: {

@@ -10,7 +10,7 @@ export default function JsonLd({ data }: { data: object }) {
   );
 }
 
-export const SITE = "https://integrilytics.vercel.app";
+export const SITE = "https://www.integrilyticsinc.com";
 
 export function breadcrumb(items: { name: string; path: string }[]) {
   return {

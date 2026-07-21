@@ -23,7 +23,7 @@ export async function generateMetadata({
   return {
     title: `${a.title} | IntegriLytics`,
     description: a.excerpt,
-    alternates: { canonical: `https://integrilytics.vercel.app/resources/${a.slug}` },
+    alternates: { canonical: `https://www.integrilyticsinc.com/resources/${a.slug}` },
     openGraph: {
       type: "article",
       title: a.title,
@@ -66,7 +66,7 @@ export default async function ArticlePage({
             name: "IntegriLytics",
             logo: {
               "@type": "ImageObject",
-              url: "https://integrilytics.vercel.app/media/logo.png",
+              url: "https://www.integrilyticsinc.com/media/logo.png",
             },
           },
           mainEntityOfPage: `${SITE}/resources/${article.slug}`,

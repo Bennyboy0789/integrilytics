@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Resources | Accounting, HR & Business Guides | IntegriLytics",
   description:
     "Practical guides on accounting, bookkeeping, payroll, HR, taxes, and business strategy for small business owners, from the IntegriLytics team.",
-  alternates: { canonical: "https://integrilytics.vercel.app/resources" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/resources" },
 };
 
 const [featured, ...rest] = articles;

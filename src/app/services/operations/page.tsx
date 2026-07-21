@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Operational Oversight for Small Businesses | IntegriLytics",
   description:
     "Operational oversight for small businesses nationwide: operations, office admin, process improvement, systems, planning, and performance.",
-  alternates: { canonical: "https://integrilytics.vercel.app/services/operations" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/services/operations" },
 };
 
 // Images aligned to the Operational Oversight Solutions categories, in order.

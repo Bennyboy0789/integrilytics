@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "HR Services for Small Businesses | IntegriLytics",
   description:
     "Talent acquisition, employee relations, compensation and benefits, HR compliance, workplace safety, and training for small businesses nationwide.",
-  alternates: { canonical: "https://integrilytics.vercel.app/services/hr" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/services/hr" },
 };
 
 // Images aligned to the Human Resource Solutions categories, in order.

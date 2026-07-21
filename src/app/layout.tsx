@@ -17,19 +17,19 @@ const bodyFont = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://integrilytics.vercel.app"),
+  metadataBase: new URL("https://www.integrilyticsinc.com"),
   title: "IntegriLytics | Accounting, HR & Operational Oversight",
   description:
     "Expert accounting, HR, and operational oversight for small businesses nationwide. IntegriLytics handles the numbers and the people, remote or on-site.",
   keywords: ["accounting", "HR", "human resources", "operational oversight", "business consulting", "small business accounting", "outsourced HR", "bookkeeping", "payroll", "IntegriLytics"],
   alternates: {
-    canonical: "https://integrilytics.vercel.app",
+    canonical: "https://www.integrilyticsinc.com",
   },
   openGraph: {
     title: "IntegriLytics | Accounting, HR & Operational Oversight",
     description:
       "Expert accounting, HR, and operational oversight for small businesses nationwide. We handle the numbers and the people so you can run your business.",
-    url: "https://integrilytics.vercel.app",
+    url: "https://www.integrilyticsinc.com",
     type: "website",
     siteName: "IntegriLytics",
   },

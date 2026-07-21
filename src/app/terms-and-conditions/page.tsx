@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions | IntegriLytics",
   description:
     "The terms and conditions that govern your use of the IntegriLytics, Inc. website and content.",
-  alternates: { canonical: "https://integrilytics.vercel.app/terms-and-conditions" },
+  alternates: { canonical: "https://www.integrilyticsinc.com/terms-and-conditions" },
 };
 
 export default function TermsPage() {

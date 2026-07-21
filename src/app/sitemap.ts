@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { articles } from "./resources/articles";
 
-const SITE = "https://integrilytics.vercel.app";
+const SITE = "https://www.integrilyticsinc.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
