@@ -115,7 +115,7 @@ export default async function ArticlePage({
             width={1600}
             height={900}
             priority
-            className="img-grade w-full h-[260px] md:h-[420px] object-cover rounded-3xl shadow-premium-lg"
+            className="w-full aspect-[16/9] object-cover rounded-3xl shadow-premium-lg bg-cream-100"
           />
         </div>
       </section>
@@ -152,15 +152,14 @@ export default async function ArticlePage({
                 href={`/resources/${a.slug}`}
                 className="group flex h-full flex-col rounded-3xl border border-cream-200 bg-white shadow-premium hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                <div className="relative h-36 w-full overflow-hidden">
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-cream-100">
                   <Image
                     src={a.image}
                     alt={a.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="img-grade object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
-                  <div className="absolute inset-x-0 top-0 h-1 bg-brass-400" />
                 </div>
                 <div className="flex flex-1 flex-col p-7">
                   <span className="inline-block w-fit rounded-full bg-brass-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brass-700 mb-4">

@@ -73,18 +73,17 @@ export default function ResourcesPage() {
         <div className="max-w-6xl mx-auto">
           <Link
             href={`/resources/${featured.slug}`}
-            className="group grid lg:grid-cols-2 rounded-3xl border border-cream-200 bg-white shadow-premium hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+            className="group block rounded-3xl border border-cream-200 bg-white shadow-premium hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
           >
-            <div className="relative min-h-[240px] lg:min-h-full overflow-hidden">
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-cream-100">
               <Image
                 src={featured.image}
                 alt={featured.imageAlt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 1152px"
                 priority
-                className="img-grade object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-x-0 bottom-0 h-1 bg-brass-400 lg:hidden" />
             </div>
             <div className="p-8 md:p-10">
               <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -117,15 +116,14 @@ export default function ResourcesPage() {
               href={`/resources/${a.slug}`}
               className="group flex h-full flex-col rounded-3xl border border-cream-200 bg-white shadow-premium hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
-              <div className="relative h-44 w-full overflow-hidden">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-cream-100">
                 <Image
                   src={a.image}
                   alt={a.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="img-grade object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-x-0 top-0 h-1 bg-brass-400" />
               </div>
               <div className="flex flex-1 flex-col p-7">
                 <div className="mb-4">
