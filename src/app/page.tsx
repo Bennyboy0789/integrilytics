@@ -4,6 +4,7 @@ import Link from "next/link";
 import ContactForm from "./ContactForm";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
+import Testimonials from "./Testimonials";
 
 const SITE_URL = "https://integrilytics.vercel.app";
 const PHONE_DISPLAY = "(888) 316-0360";
@@ -109,6 +110,14 @@ const faqs = [
   {
     q: "Where are you located?",
     a: "We are based in Fayetteville, North Carolina, and work with clients nationwide. Most of our work is remote, with on-site support when it makes sense.",
+  },
+  {
+    q: "How much do your services cost?",
+    a: "It depends on the size of your business and what you need, so we do not do one-size-fits-all pricing. On your free call we will scope the work and give you a clear, honest number before you commit to anything.",
+  },
+  {
+    q: "Can I start with one service and add more later?",
+    a: "Yes. Plenty of clients start with accounting or HR and expand once they see how we work. Because everything sits under one team, adding a service later is simple and there is no new vendor to onboard.",
   },
   {
     q: "How do I get started?",
@@ -423,6 +432,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* FAQ */}
       <section id="faq" className="py-28 px-6 bg-cream">

@@ -24,6 +24,8 @@ export type SpecializedData = {
   items: { name: string; detail: string }[];
 };
 
+export type ServiceFaq = { q: string; a: string };
+
 export default function PremiumServicePage({
   eyebrow,
   title,
@@ -34,6 +36,7 @@ export default function PremiumServicePage({
   coreHeading,
   rows,
   specialized,
+  faqs,
   path,
 }: {
   eyebrow: string;
@@ -45,6 +48,7 @@ export default function PremiumServicePage({
   coreHeading: string;
   rows: FeatureRowData[];
   specialized?: SpecializedData;
+  faqs?: ServiceFaq[];
   path: string;
 }) {
   return (
@@ -57,6 +61,19 @@ export default function PremiumServicePage({
           { name: eyebrow, path },
         ])}
       />
+      {faqs && faqs.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }}
+        />
+      )}
       <SiteHeader sticky />
 
       {/* Hero */}
@@ -153,6 +170,33 @@ export default function PremiumServicePage({
               </Reveal>
             ))}
           </div>
+        </section>
+      )}
+
+      {/* Service FAQ */}
+      {faqs && faqs.length > 0 && (
+        <section className="px-6 py-24 bg-cream-100">
+          <Reveal className="max-w-3xl mx-auto">
+            <div className="text-center mb-14">
+              <p className="rule-brass rule-center text-xs font-semibold uppercase tracking-[0.2em] text-brass-600 mb-4">
+                FAQ
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold text-blue-900">Questions, answered</h2>
+            </div>
+            <div className="rounded-3xl bg-white shadow-premium border border-cream-200 px-6 sm:px-8 divide-y divide-cream-200">
+              {faqs.map((f) => (
+                <details key={f.q} className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-blue-900">
+                    {f.q}
+                    <span className="ml-4 text-2xl leading-none text-brass-500 transition-transform group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-gray-600 leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </Reveal>
         </section>
       )}
 
