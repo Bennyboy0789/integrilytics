@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BookingClient from "./BookingClient";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
+import LocationMap from "../LocationMap";
 import JsonLd, { SITE, breadcrumb } from "../JsonLd";
 import { consultations, priceLabel } from "./consultations";
 
@@ -62,6 +63,39 @@ export default function BookPage() {
       <section className="px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <BookingClient />
+        </div>
+      </section>
+
+      {/* Office / in-person */}
+      <section className="px-6 pb-16">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="rule-brass text-xs font-semibold uppercase tracking-[0.2em] text-brass-600 mb-4">
+              Meeting in person?
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900">Our office</h2>
+            <address className="not-italic mt-4 text-lg text-gray-600 leading-relaxed">
+              IntegriLytics, Inc.
+              <br />
+              225 Green Street, Suite 601-F
+              <br />
+              Fayetteville, NC 28311
+            </address>
+            <p className="mt-3 text-sm text-gray-500 max-w-md">
+              Choose an office consultation above to meet with us here. Remote and on-site options
+              are available too.
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=IntegriLytics%2C%20Inc.%2C%20225%20Green%20Street%2C%20Suite%20601-F%2C%20Fayetteville%2C%20NC%2028311"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brass-600 hover:text-brass-700"
+            >
+              Get directions
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <LocationMap tone="light" />
         </div>
       </section>
 

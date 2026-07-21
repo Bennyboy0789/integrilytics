@@ -4,6 +4,7 @@ import Link from "next/link";
 import { whoWeAre, whatWeDo, process, whereWeMeet, whoWeSupport } from "./content";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
+import LocationMap from "../LocationMap";
 import Reveal from "../motion/Reveal";
 import JsonLd, { SITE, breadcrumb } from "../JsonLd";
 
@@ -226,6 +227,32 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="mt-5 text-sm text-gray-500 max-w-xl mx-auto">{whereWeMeet.travelNote}</p>
+        </Reveal>
+
+        <Reveal className="max-w-5xl mx-auto mt-12 grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="rule-brass text-xs font-semibold uppercase tracking-[0.2em] text-brass-600 mb-4">
+              Our office
+            </p>
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-900">Visit us in Fayetteville</h3>
+            <address className="not-italic mt-4 text-lg text-gray-600 leading-relaxed">
+              IntegriLytics, Inc.
+              <br />
+              225 Green Street, Suite 601-F
+              <br />
+              Fayetteville, NC 28311
+            </address>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=IntegriLytics%2C%20Inc.%2C%20225%20Green%20Street%2C%20Suite%20601-F%2C%20Fayetteville%2C%20NC%2028311"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brass-600 hover:text-brass-700"
+            >
+              Get directions
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <LocationMap tone="light" />
         </Reveal>
       </section>
 

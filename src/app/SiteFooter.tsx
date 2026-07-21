@@ -11,9 +11,13 @@ export default function SiteFooter() {
     <footer className="py-12 px-6 bg-blue-950 text-blue-300 text-sm">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         <div>
-          <p className="font-bold text-white text-base">IntegriLytics Inc.</p>
-          <p className="mt-2">Fayetteville, NC</p>
-          <p><a href={`tel:${PHONE_TEL}`} className="hover:text-white">{PHONE_DISPLAY}</a></p>
+          <p className="font-bold text-white text-base">IntegriLytics, Inc.</p>
+          <address className="not-italic mt-2 leading-relaxed">
+            225 Green Street, Suite 601-F
+            <br />
+            Fayetteville, NC 28311
+          </address>
+          <p className="mt-2"><a href={`tel:${PHONE_TEL}`} className="hover:text-white">{PHONE_DISPLAY}</a></p>
           <p><a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a></p>
         </div>
         <div className="md:text-right">

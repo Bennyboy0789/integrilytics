@@ -5,6 +5,7 @@ import ContactForm from "./ContactForm";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import Testimonials from "./Testimonials";
+import LocationMap from "./LocationMap";
 
 const SITE_URL = "https://integrilytics.vercel.app";
 const PHONE_DISPLAY = "(888) 316-0360";
@@ -137,8 +138,10 @@ const organizationLd = {
   email: EMAIL,
   address: {
     "@type": "PostalAddress",
+    streetAddress: "225 Green Street, Suite 601-F",
     addressLocality: "Fayetteville",
     addressRegion: "NC",
+    postalCode: "28311",
     addressCountry: "US",
   },
   areaServed: "United States",
@@ -515,12 +518,34 @@ export default function Home() {
                     <path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                     <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                   </svg>
-                  Location
+                  Office
                 </h3>
-                <p>Fayetteville, North Carolina</p>
-                <p className="text-blue-200 text-sm mt-1">Serving businesses nationwide.</p>
+                <address className="not-italic leading-relaxed">
+                  IntegriLytics, Inc.
+                  <br />
+                  225 Green Street, Suite 601-F
+                  <br />
+                  Fayetteville, NC 28311
+                </address>
+                <p className="text-blue-200 text-sm mt-2">
+                  In-office visits by appointment. Serving businesses nationwide.
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=IntegriLytics%2C%20Inc.%2C%20225%20Green%20Street%2C%20Suite%20601-F%2C%20Fayetteville%2C%20NC%2028311"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brass-300 hover:text-brass-200"
+                >
+                  Get directions
+                  <span aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
+          </div>
+
+          {/* Map (loads Google only on click) */}
+          <div className="reveal mt-10">
+            <LocationMap />
           </div>
         </div>
       </section>
