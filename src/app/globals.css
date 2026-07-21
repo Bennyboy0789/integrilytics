@@ -33,6 +33,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  /* Clip transient horizontal overflow from slide-in animations / decorative frames.
+     `clip` (not `hidden`) so it never creates a scroll container that would break the sticky header. */
+  overflow-x: clip;
 }
 
 /* Soft, diffuse elevation for cards/panels — warmer and deeper than default Tailwind shadows. */
