@@ -290,10 +290,10 @@ export default function Home() {
               What We Do
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-              Three pillars, one team
+              A Holistic Approach to Building a Better Business
             </h2>
-            <p className="text-lg text-gray-600 max-w-xl mx-auto">
-              Accounting, HR, and operations under one roof, so the details never fall through the cracks.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Sticky notes everywhere? Books a little behind? Processes all over the place? We have seen worse. We believe the strongest businesses are built by looking at the whole picture. That is why we take a holistic approach to bringing accounting, human resources, and operational oversight together as one connected system. Whether you need support in one area or several, we tailor our services to your business so you can get back to building the business you envisioned ... or taking a vacation ... or a nap ... or just finally eating a snack.
             </p>
           </div>
           <div className="reveal grid md:grid-cols-3 gap-8">
@@ -320,18 +320,6 @@ export default function Home() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Holistic Approach */}
-      <section className="py-20 px-6 bg-cream-100">
-        <div className="reveal max-w-3xl mx-auto text-center">
-          <p className="rule-brass rule-center text-xs font-semibold uppercase tracking-[0.2em] text-brass-600 mb-5">
-            A Holistic Approach to Building a Better Business
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Sticky notes everywhere? Books a little behind? Processes all over the place? We have seen worse. We believe the strongest businesses are built by looking at the whole picture. That is why we take a holistic approach to bringing accounting, human resources, and operational oversight together as one connected system. Whether you need support in one area or several, we tailor our services to your business so you can get back to building the business you envisioned ... or taking a vacation ... or a nap ... or just finally eating a snack.
-          </p>
         </div>
       </section>
 
