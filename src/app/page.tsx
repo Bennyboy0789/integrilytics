@@ -292,7 +292,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
               A Holistic Approach to Building a Better Business
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Sticky notes everywhere? Books a little behind? Processes all over the place? We have seen worse. We believe the strongest businesses are built by looking at the whole picture. That is why we take a holistic approach to bringing accounting, human resources, and operational oversight together as one connected system. Whether you need support in one area or several, we tailor our services to your business so you can get back to building the business you envisioned ... or taking a vacation ... or a nap ... or just finally eating a snack.
             </p>
           </div>
