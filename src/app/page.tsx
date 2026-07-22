@@ -303,9 +303,9 @@ export default function Home() {
                 href={service.href}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-premium hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="relative h-48 w-full overflow-hidden">
-                  <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105">
-                    <ServiceGraphic variant={service.variant} />
+                <div className="relative h-48 w-full z-20">
+                  <div className="absolute inset-0">
+                    <ServiceGraphic variant={service.variant} bleed />
                   </div>
                   <div className="absolute inset-x-0 top-0 z-10 h-1 bg-brass-400" />
                 </div>

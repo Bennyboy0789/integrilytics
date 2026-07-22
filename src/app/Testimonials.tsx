@@ -5,7 +5,6 @@
 type Review = {
   name: string;
   meta: string;
-  tag?: string;
   text: string;
 };
 
@@ -13,7 +12,6 @@ const reviews: Review[] = [
   {
     name: "Misty Shreve",
     meta: "Google review",
-    tag: "Reasonable price",
     text: "New to QBO, Pamela made my life much easier. Her knowledge, coaching, and assistance were exactly what I needed. I have been with her for 3 years now and I wouldn't have made it without her. Always available, and I have had a lot of questions. Whether it's QBO, taxes, insurance, or payroll, she has it together. I cannot recommend her services enough. She has the right answers at a reasonable price.",
   },
   {
@@ -29,13 +27,11 @@ const reviews: Review[] = [
   {
     name: "Deborah Jenkins",
     meta: "Google review",
-    tag: "Great price",
     text: "Great service. Our last accountant retired and we needed to find someone. Pamela was recommended to me and she has taken great care of our books.",
   },
   {
     name: "Adrienne Graham",
     meta: "Google review",
-    tag: "Great price",
     text: "Pamela is an amazing woman and has been so helpful!",
   },
 ];
@@ -72,14 +68,7 @@ export default function Testimonials() {
               key={r.name}
               className="break-inside-avoid rounded-3xl bg-white border border-cream-200 shadow-premium p-7"
             >
-              <div className="flex items-center justify-between gap-3">
-                <Stars />
-                {r.tag ? (
-                  <span className="rounded-full bg-brass-100 px-3 py-1 text-xs font-semibold text-brass-700">
-                    {r.tag}
-                  </span>
-                ) : null}
-              </div>
+              <Stars />
               <blockquote className="mt-4 text-gray-700 leading-relaxed">{r.text}</blockquote>
               <figcaption className="mt-5 flex items-center gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-900 font-serif text-lg font-bold text-white">

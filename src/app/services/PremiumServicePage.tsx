@@ -4,7 +4,8 @@ import SiteHeader from "../SiteHeader";
 import Reveal from "../motion/Reveal";
 import FeatureRow from "../motion/FeatureRow";
 import SiteFooter from "../SiteFooter";
-import ServiceGraphic, { type ServiceVariant } from "../ServiceGraphic";
+import ServiceGraphic, { type ServiceVariant, SERVICE_THEME } from "../ServiceGraphic";
+import HeroDuck from "./HeroDuck";
 import JsonLd, { serviceSchema, breadcrumb } from "../JsonLd";
 
 const PHONE_DISPLAY = "(888) 316-0360";
@@ -54,6 +55,7 @@ export default function PremiumServicePage({
   graphic?: ServiceVariant;
   path: string;
 }) {
+  const color = graphic ? SERVICE_THEME[graphic] : null;
   return (
     <main className="min-h-screen bg-cream">
       <JsonLd data={serviceSchema({ name: eyebrow, description: intro, path })} />
@@ -80,52 +82,70 @@ export default function PremiumServicePage({
       <SiteHeader sticky />
 
       {/* Hero */}
-      <section className="px-6 pt-12 pb-20 bg-gradient-to-b from-brass-50 to-cream">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section
+        className={`relative overflow-hidden px-6 pt-12 pb-20 ${color ? "" : "bg-gradient-to-b from-brass-50 to-cream"}`}
+        style={color ? { background: `linear-gradient(145deg, ${color.from} 0%, ${color.to} 100%)` } : undefined}
+      >
+        {color ? (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 opacity-[0.13]"
+            style={{
+              backgroundImage: "radial-gradient(rgba(255,255,255,.95) 1.4px, transparent 1.7px)",
+              backgroundSize: "16px 16px",
+            }}
+          />
+        ) : null}
+        <div className="relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
-            <Link href="/#services" className="text-sm font-semibold text-brass-600 hover:text-brass-700">
+            <Link href="/#services" className="text-sm font-semibold text-blue-900 hover:text-blue-950">
               ← All services
             </Link>
-            <p className="rule-brass mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-brass-600">
+            <p className="rule-brass mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-blue-900">
               {eyebrow}
             </p>
-            <h1 className="mt-5 text-4xl md:text-5xl xl:text-6xl font-bold text-blue-900 leading-tight">
+            <h1 className="mt-5 text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight [text-shadow:0_1px_10px_rgba(20,33,61,0.18)]">
               {title}
             </h1>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">{intro}</p>
+            <p className="mt-6 text-lg text-blue-900/90 leading-relaxed">{intro}</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/#contact"
-                className="inline-block px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition-colors shadow-premium"
+                className="inline-block px-8 py-3 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-950 transition-colors shadow-premium"
               >
                 Get a Free Consultation
               </Link>
               <Link
                 href="/book"
-                className="inline-block px-8 py-3 border border-brass-300 text-blue-900 rounded-full font-semibold hover:bg-brass-50 hover:border-brass-400 transition-colors"
+                className="inline-block px-8 py-3 border-2 border-blue-900/40 text-blue-900 rounded-full font-semibold hover:border-blue-900 hover:bg-white/20 transition-colors"
               >
                 Book a Consultation
               </Link>
             </div>
           </Reveal>
           <Reveal className="relative" delay={0.12}>
-            <div
-              aria-hidden="true"
-              className="absolute -z-10 -right-5 top-5 h-full w-full rounded-3xl border border-brass-300/70"
-            />
             {graphic ? (
-              <div className="w-full h-[320px] md:h-[440px] overflow-hidden rounded-3xl shadow-premium-lg">
-                <ServiceGraphic variant={graphic} />
+              <div className="relative h-[300px] md:h-[440px] w-full">
+                <HeroDuck variant={graphic} />
+                <div className="relative z-10 h-full w-full">
+                  <ServiceGraphic variant={graphic} bare />
+                </div>
               </div>
             ) : (
-              <Image
-                src={heroImage}
-                alt={heroAlt}
-                width={1200}
-                height={900}
-                priority
-                className="img-grade w-full h-[320px] md:h-[440px] object-cover rounded-3xl shadow-premium-lg"
-              />
+              <>
+                <div
+                  aria-hidden="true"
+                  className="absolute -z-10 -right-5 top-5 h-full w-full rounded-3xl border border-brass-300/70"
+                />
+                <Image
+                  src={heroImage}
+                  alt={heroAlt}
+                  width={1200}
+                  height={900}
+                  priority
+                  className="img-grade w-full h-[320px] md:h-[440px] object-cover rounded-3xl shadow-premium-lg"
+                />
+              </>
             )}
           </Reveal>
         </div>
