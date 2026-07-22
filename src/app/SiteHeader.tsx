@@ -27,6 +27,7 @@ export default function SiteHeader({ sticky = false }: { sticky?: boolean }) {
           <NavServices />
           <Link href="/about" className="hover:text-blue-900 transition-colors">About</Link>
           <Link href="/resources" className="hover:text-blue-900 transition-colors">Resources</Link>
+          <Link href="/contact" className="hover:text-blue-900 transition-colors">Contact</Link>
           <a
             href="https://community.suitedash.com/auth/login"
             target="_blank"

@@ -25,6 +25,7 @@ export default function SiteFooter() {
             <Link href="/" className="hover:text-white">Home</Link>
             <Link href="/about" className="hover:text-white">About</Link>
             <Link href="/resources" className="hover:text-white">Resources</Link>
+            <Link href="/contact" className="hover:text-white">Contact</Link>
             <Link href="/book" className="hover:text-white">Book a Consultation</Link>
             <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="hover:text-white">Terms &amp; Conditions</Link>
