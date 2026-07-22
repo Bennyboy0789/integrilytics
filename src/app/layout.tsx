@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   title: "IntegriLytics | Accounting, HR & Operational Oversight",
   description:
     "Expert accounting, HR, and operational oversight for small businesses nationwide. IntegriLytics handles the numbers and the people, remote or on-site.",
-  keywords: ["accounting", "HR", "human resources", "operational oversight", "business consulting", "small business accounting", "outsourced HR", "bookkeeping", "payroll", "IntegriLytics"],
   alternates: {
     canonical: "https://www.integrilyticsinc.com",
   },

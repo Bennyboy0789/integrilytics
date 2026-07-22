@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import LegalPage from "../LegalPage";
 import JsonLd, { breadcrumb } from "../JsonLd";
+import { pageMeta } from "../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Terms & Conditions | IntegriLytics",
   description:
     "The terms and conditions that govern your use of the IntegriLytics, Inc. website and content.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/terms-and-conditions" },
-};
+  path: "/terms-and-conditions",
+});
 
 export default function TermsPage() {
   return (

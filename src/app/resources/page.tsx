@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import JsonLd, { SITE, breadcrumb } from "../JsonLd";
+import { pageMeta } from "../lib/seo";
 import { articles, readingMinutes } from "./articles";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Resources | Accounting, HR & Business Guides | IntegriLytics",
   description:
     "Practical guides on accounting, bookkeeping, payroll, HR, taxes, and business strategy for small business owners, from the IntegriLytics team.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/resources" },
-};
+  path: "/resources",
+});
 
 const [featured, ...rest] = articles;
 

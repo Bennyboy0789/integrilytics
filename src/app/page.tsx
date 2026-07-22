@@ -126,8 +126,10 @@ const faqs = [
 
 const organizationLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "AccountingService",
+  "@id": `${SITE_URL}/#organization`,
   name: "IntegriLytics",
+  legalName: "IntegriLytics, Inc.",
   description:
     "Accounting, HR, and operational oversight for small and mid-sized businesses nationwide.",
   logo: "https://www.integrilyticsinc.com/media/logo.png",
@@ -142,8 +144,20 @@ const organizationLd = {
     postalCode: "28311",
     addressCountry: "US",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 35.054632,
+    longitude: -78.87798,
+  },
   areaServed: "United States",
   url: SITE_URL,
+  sameAs: [
+    "https://www.facebook.com/IntegriLytics/",
+    "https://www.instagram.com/integrilytics/",
+    "https://www.linkedin.com/company/integrilyticsinc",
+    "https://www.tiktok.com/@integrilytics",
+    "https://www.youtube.com/@integrilytics",
+  ],
 };
 
 const faqLd = {
@@ -190,6 +204,7 @@ export default function Home() {
                 alt="A wall of colorful sticky notes covered in small business pain points: payroll issues, late tax filings, HR, stress, no processes"
                 width={1534}
                 height={1289}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
                 className="w-full h-auto"
               />

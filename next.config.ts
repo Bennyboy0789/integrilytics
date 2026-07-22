@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // The article's title/H1 reads "Part 4"; the old slug said "part-3". Keep the
+      // old URL working (301) after aligning the slug to the on-page title.
+      {
+        source: "/resources/the-better-business-blueprint-part-3-bringing-the-blueprint-to-life",
+        destination: "/resources/the-better-business-blueprint-part-4-bringing-the-blueprint-to-life",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

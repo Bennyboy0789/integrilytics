@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
 import BookingClient from "./BookingClient";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import LocationMap from "../LocationMap";
 import JsonLd, { SITE, breadcrumb } from "../JsonLd";
+import { pageMeta } from "../lib/seo";
 import { consultations, priceLabel } from "./consultations";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Book a Consultation | IntegriLytics",
   description:
     "Book a remote, office, or on-site consultation with IntegriLytics. Pick a time that works and we will take it from there. Free 15-minute intro calls available.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/book" },
-};
+  path: "/book",
+});
 
 export default function BookPage() {
   return (

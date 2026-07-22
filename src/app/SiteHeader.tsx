@@ -17,8 +17,9 @@ export default function SiteHeader({ sticky = false }: { sticky?: boolean }) {
           <Image
             src="/media/logo.png"
             alt="IntegriLytics"
-            width={1536}
-            height={1024}
+            width={180}
+            height={120}
+            sizes="120px"
             priority
             className="h-20 w-auto"
           />

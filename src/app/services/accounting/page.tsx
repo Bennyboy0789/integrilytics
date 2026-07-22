@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import PremiumServicePage from "../PremiumServicePage";
 import { accounting, serviceSummaries } from "../content";
+import { pageMeta } from "../../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Accounting Services for Small Businesses | IntegriLytics",
   description:
     "Bookkeeping, tax prep, payroll, and specialized accounting (cost, forensic, trust, multi-entity) for small businesses nationwide. Clean books, clear numbers.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/services/accounting" },
-};
+  path: "/services/accounting",
+});
 
 // Images aligned to the Core Accounting Services categories, in order.
 const coreImages: { src: string; alt: string }[] = [

@@ -6,7 +6,7 @@ import SiteHeader from "../../SiteHeader";
 import SiteFooter from "../../SiteFooter";
 import JsonLd, { SITE, breadcrumb } from "../../JsonLd";
 import ArticleBody from "../ArticleBody";
-import { articles, getArticle, readingMinutes } from "../articles";
+import { articles, getArticle, readingMinutes, metaDescription } from "../articles";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -20,14 +20,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = getArticle(slug);
   if (!a) return {};
+  const desc = metaDescription(a);
   return {
     title: `${a.title} | IntegriLytics`,
-    description: a.excerpt,
+    description: desc,
     alternates: { canonical: `https://www.integrilyticsinc.com/resources/${a.slug}` },
     openGraph: {
       type: "article",
       title: a.title,
-      description: a.excerpt,
+      description: desc,
       url: `${SITE}/resources/${a.slug}`,
       publishedTime: a.date,
       authors: [a.author],
@@ -57,16 +58,25 @@ export default async function ArticlePage({
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: article.title,
-          description: article.excerpt,
+          description: metaDescription(article),
+          image: [`${SITE}${article.image}`],
           datePublished: article.date,
           dateModified: article.date,
-          author: { "@type": "Person", name: article.author },
+          author: {
+            "@type": "Person",
+            name: article.author,
+            jobTitle: "President",
+            url: `${SITE}/about`,
+          },
           publisher: {
             "@type": "Organization",
+            "@id": `${SITE}/#organization`,
             name: "IntegriLytics",
             logo: {
               "@type": "ImageObject",
               url: "https://www.integrilyticsinc.com/media/logo.png",
+              width: 1536,
+              height: 1024,
             },
           },
           mainEntityOfPage: `${SITE}/resources/${article.slug}`,

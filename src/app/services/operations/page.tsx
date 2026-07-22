@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import PremiumServicePage from "../PremiumServicePage";
 import { operations, serviceSummaries } from "../content";
+import { pageMeta } from "../../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Operational Oversight for Small Businesses | IntegriLytics",
   description:
     "Operational oversight for small businesses nationwide: operations, office admin, process improvement, systems, planning, and performance.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/services/operations" },
-};
+  path: "/services/operations",
+});
 
 // Images aligned to the Operational Oversight Solutions categories, in order.
 const rowImages: { src: string; alt: string }[] = [

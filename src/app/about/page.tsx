@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { whoWeAre, whatWeDo, process, whereWeMeet, whoWeSupport, team } from "./content";
@@ -7,16 +6,17 @@ import SiteFooter from "../SiteFooter";
 import LocationMap from "../LocationMap";
 import Reveal from "../motion/Reveal";
 import JsonLd, { SITE, breadcrumb } from "../JsonLd";
+import { pageMeta } from "../lib/seo";
 
 const PHONE_DISPLAY = "(888) 316-0360";
 const PHONE_TEL = "+18883160360";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "About IntegriLytics | Who We Are, How We Work, Who We Serve",
   description:
     "Integrity plus analytics. Meet IntegriLytics: who we are, what we do, our five-step process, how and where we work, and the industries we support nationwide.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/about" },
-};
+  path: "/about",
+});
 
 const serviceImg: Record<string, string> = {
   Accounting: "/media/svc-accounting.jpg",

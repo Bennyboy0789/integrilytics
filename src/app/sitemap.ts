@@ -3,14 +3,18 @@ import { articles } from "./resources/articles";
 
 const SITE = "https://www.integrilyticsinc.com";
 
+// Stable "last updated" date for static pages. Bump this when their content
+// meaningfully changes — using new Date() here would churn every deploy and
+// weaken the freshness signal. Article pages use their own publish dates below.
+const STATIC_UPDATED = new Date("2026-07-22");
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const page = (
     path: string,
     priority: number
   ): MetadataRoute.Sitemap[number] => ({
     url: `${SITE}${path}`,
-    lastModified: now,
+    lastModified: STATIC_UPDATED,
     changeFrequency: "monthly",
     priority,
   });
@@ -22,6 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/services/operations", 0.9),
     page("/about", 0.7),
     page("/book", 0.8),
+    page("/contact", 0.7),
+    page("/events", 0.5),
     page("/resources", 0.7),
     ...articles.map((a) => ({
       url: `${SITE}/resources/${a.slug}`,

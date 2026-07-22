@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import LegalPage from "../LegalPage";
 import JsonLd, { breadcrumb } from "../JsonLd";
+import { pageMeta } from "../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Privacy Policy | IntegriLytics",
   description:
     "How IntegriLytics, Inc. collects, uses, and protects your information when you visit our website and inquire about our services.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/privacy-policy" },
-};
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

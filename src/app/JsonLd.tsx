@@ -40,6 +40,7 @@ export function serviceSchema(opts: {
     areaServed: "United States",
     provider: {
       "@type": "Organization",
+      "@id": `${SITE}/#organization`,
       name: "IntegriLytics",
       url: SITE,
       telephone: "+18883160360",

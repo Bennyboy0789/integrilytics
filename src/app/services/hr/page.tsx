@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import PremiumServicePage from "../PremiumServicePage";
 import { hr, serviceSummaries } from "../content";
+import { pageMeta } from "../../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "HR Services for Small Businesses | IntegriLytics",
   description:
     "Talent acquisition, employee relations, compensation and benefits, HR compliance, workplace safety, and training for small businesses nationwide.",
-  alternates: { canonical: "https://www.integrilyticsinc.com/services/hr" },
-};
+  path: "/services/hr",
+});
 
 // Images aligned to the Human Resource Solutions categories, in order.
 const rowImages: { src: string; alt: string }[] = [

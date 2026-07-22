@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
+import { pageMeta } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Events | IntegriLytics",
+export const metadata = pageMeta({
+  title: "Events & Groups | IntegriLytics",
   description:
-    "Events and groups hosted by IntegriLytics, including the Fayetteville Area Women's Business Collective.",
-};
+    "Events and groups hosted by IntegriLytics, including the Fayetteville Area Women's Business Collective for women business owners.",
+  path: "/events",
+});
 
 export default function EventsPage() {
   return (

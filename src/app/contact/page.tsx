@@ -1,18 +1,19 @@
-import type { Metadata } from "next";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import ContactForm from "../ContactForm";
 import LocationMap from "../LocationMap";
+import { pageMeta } from "../lib/seo";
 
 const PHONE_DISPLAY = "(888) 316-0360";
 const PHONE_TEL = "+188****0360";
 const EMAIL = "info@integrilyticsinc.com";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Contact IntegriLytics | Accounting & HR | Fayetteville NC",
   description:
     "Get in touch with IntegriLytics for accounting, HR, and operational oversight. Located in Fayetteville, NC, serving small businesses nationwide.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
