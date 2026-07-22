@@ -5,11 +5,22 @@ export const whoWeAre = {
   headline: "We Eat Chaos For Breakfast",
   intro:
     "Let's be honest. Business gets messy. Books fall behind, payroll gets complicated, processes break, and sometimes it feels like everything is happening at once. That's where we come in. Whether you need help with a single task or support across your entire operation, we'll help you untangle the chaos and get your business moving forward again.",
+  promise:
+    "Every business is built by people, and every person deserves to be treated as more than a transaction. That's our promise. We meet you where you are, because every client, every challenge, and every goal is different. We take a holistic approach, recognizing that what happens in one area of your business often affects another. Whether you need help untangling one issue, navigating something more complex, or anything in between, we're here to support you in the way that works best for you.",
+  peopleFirst:
+    "The first part of our name, Integrity, is more than a core value. It's a commitment. It shapes every recommendation we make, every conversation we have, and every relationship we build. We believe in honest guidance, ethical business practices, and doing what's right because that's how trust is earned.",
   integrity:
-    "Our name begins with what defines our approach: integrity. Integrity is more than a principle to us, it is the standard behind every decision, recommendation, and client relationship. We believe in honest communication, ethical business practices, and doing what is right, not just what is easy. Our clients trust us to provide guidance that is transparent, thoughtful, and always aligned with their best interests and long-term success.",
+    "The second part of our name, Analytics, is more than information. It's perspective. Data alone doesn't create better businesses. Understanding what it means, why it matters, and how it connects to the rest of your organization does. That's the perspective we bring to every client and every challenge.",
   analytics:
     "The second half of our name, analytics, reflects the way we work. We do more than process numbers, we interpret data, identify patterns, and connect what is happening financially to the bigger picture across your entire business. By turning information into insight, we help support, refine, and create processes across departments, strengthening operations, improving decision-making, and building systems that allow your business to grow with intention.",
 };
+
+export const team = [
+  { name: "Pamela Oppenheimer", title: "President", image: "/media/team-pamela.png" },
+  { name: "Jessica Greene", title: "Director of Client Solutions", image: "/media/team-jessica.png" },
+  { name: "KieuChinh Tran", title: "Director of Tax Services", image: "/media/team-kieuchinh.png" },
+  { name: "Melinda Niemczenia", title: "Client Support Specialist", image: "/media/team-melinda.png" },
+];
 
 export const whatWeDo = {
   intro:

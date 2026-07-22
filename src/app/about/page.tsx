@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { whoWeAre, whatWeDo, process, whereWeMeet, whoWeSupport } from "./content";
+import { whoWeAre, whatWeDo, process, whereWeMeet, whoWeSupport, team } from "./content";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
 import LocationMap from "../LocationMap";
@@ -83,24 +83,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Integrity + Analytics */}
-      <section className="px-6 py-24 bg-cream">
-        <Reveal className="max-w-3xl mx-auto text-center mb-14">
+      {/* A Promise */}
+      <section className="px-6 py-24 bg-cream-100">
+        <Reveal className="max-w-3xl mx-auto text-center">
           <p className="rule-brass rule-center text-xs font-semibold uppercase tracking-[0.2em] text-brass-600 mb-4">
-            Our name says it
+            A Promise
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900">Integrity, plus Analytics</h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            {whoWeAre.promise}
+          </p>
         </Reveal>
+      </section>
+
+      {/* People First + Integrity + Analytics */}
+      <section className="px-6 py-24 bg-cream">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
           <Reveal className="rounded-3xl bg-white border border-cream-200 shadow-premium p-8">
+            <h3 className="font-serif text-2xl font-bold text-brass-600">People First</h3>
+            <p className="mt-4 text-gray-600 leading-relaxed">{whoWeAre.peopleFirst}</p>
+          </Reveal>
+          <Reveal delay={0.12} className="rounded-3xl bg-white border border-cream-200 shadow-premium p-8">
             <h3 className="font-serif text-2xl font-bold text-brass-600">Integrity</h3>
             <p className="mt-4 text-gray-600 leading-relaxed">{whoWeAre.integrity}</p>
           </Reveal>
-          <Reveal delay={0.12} className="rounded-3xl bg-white border border-cream-200 shadow-premium p-8">
-            <h3 className="font-serif text-2xl font-bold text-brass-600">Analytics</h3>
-            <p className="mt-4 text-gray-600 leading-relaxed">{whoWeAre.analytics}</p>
-          </Reveal>
         </div>
+        <Reveal className="max-w-2xl mx-auto mt-6 rounded-3xl bg-white border border-cream-200 shadow-premium p-8 text-center">
+          <h3 className="font-serif text-2xl font-bold text-brass-600">Analytics</h3>
+          <p className="mt-4 text-gray-600 leading-relaxed">{whoWeAre.analytics}</p>
+        </Reveal>
+      </section>
+
+      {/* Team */}
+      <section className="px-6 py-24 bg-cream-100">
+        <Reveal className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="rule-brass rule-center text-xs font-semibold uppercase tracking-[0.2em] text-brass-600 mb-4">
+              Our Team
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900">
+              Meet the people behind the promise
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, i) => (
+              <Reveal key={member.name} delay={i * 0.1}>
+                <div className="text-center">
+                  <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden bg-cream-200 border-4 border-white shadow-premium">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="160px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-blue-900">{member.name}</h3>
+                  <p className="text-sm text-brass-600 font-medium">{member.title}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       {/* What We Do */}
