@@ -103,7 +103,7 @@ export default function ContactPage() {
               Where We Meet
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-              We come to you — or meet you online
+              We come to you ... or meet you online
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Every business is different, and so is every partnership. Whether we work together remotely, on-site, or through a combination of both, we will tailor our approach to fit your business, your goals, and the way you work.
@@ -122,7 +122,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Remote Collaboration</h3>
               <p className="text-gray-600 leading-relaxed">
-                Virtual meetings, secure file sharing, and real-time collaboration keep us connected — no matter where you are located.
+                Virtual meetings, secure file sharing, and real-time collaboration keep us connected ... no matter where you are located.
               </p>
             </div>
 
@@ -149,7 +149,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Nationwide Availability</h3>
               <p className="text-gray-600 leading-relaxed">
-                For projects that require in-person attention beyond our local area, we are ready to travel — wherever your business takes you.
+                For projects that require in-person attention beyond our local area, we are ready to travel ... wherever your business takes you.
               </p>
             </div>
           </div>
