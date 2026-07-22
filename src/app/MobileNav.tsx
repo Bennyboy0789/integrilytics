@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 const PHONE_DISPLAY = "(888) 316-0360";
 const PHONE_TEL = "+18883160360";
@@ -14,6 +15,9 @@ const services = [
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -42,8 +46,8 @@ export default function MobileNav() {
         </svg>
       </button>
 
-      {open && (
-        <div className="fixed inset-x-0 top-24 bottom-0 z-40 overflow-y-auto border-t border-gray-100 bg-white px-6 py-6">
+      {open && mounted && createPortal(
+        <div className="md:hidden fixed inset-x-0 top-24 bottom-0 z-40 overflow-y-auto border-t border-gray-100 bg-white px-6 py-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Services</p>
           <div className="mb-6 flex flex-col">
             {services.map((s) => (
@@ -86,7 +90,8 @@ export default function MobileNav() {
           >
             Book a Consultation
           </Link>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
