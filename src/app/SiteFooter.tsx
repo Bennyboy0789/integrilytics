@@ -31,6 +31,7 @@ export default function SiteFooter() {
           </nav>
           <p className="mt-5">&copy; {year} IntegriLytics Inc. All rights reserved.</p>
           <p className="mt-2">Accounting, HR &amp; operational oversight for small businesses nationwide.</p>
+          <p className="mt-4 max-w-md md:ml-auto text-blue-400/60 text-xs leading-relaxed">IntegriLytics, Inc. is not a licensed CPA firm and does not provide attest or assurance services, including financial statement audits, reviews, compilations, or independent auditor reports. Services requiring CPA, CFE, or other professional licensure are performed by appropriately licensed professionals in accordance with applicable laws, regulations, and professional requirements.</p>
         </div>
       </div>
     </footer>
